@@ -1,7 +1,7 @@
 package racingcar.engine
 
-import racingcar.car.Car
-import racingcar.race.Race
+import racingcar.model.Car
+import racingcar.model.Race
 
 import racingcar.results.CarResult
 
