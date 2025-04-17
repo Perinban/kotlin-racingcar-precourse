@@ -57,14 +57,14 @@ class CarNameValidatorTest {
     fun `should throw IllegalArgumentException for car names with special characters`() {
         val input = "tesla. bmw. ford"
 
-        assertThatThrownBy { CarNameValidator.validateAll(input.split(",")) }
+        assertThatThrownBy { CarNameValidator.validateSeparator(input) }
             .isInstanceOf(IllegalArgumentException::class.java)
             .hasMessageContaining("Invalid character detected")
     }
 
     @Test
     fun `should throw IllegalArgumentException for car names with spaces in between`() {
-        val input = "tes la, ford mustang"
+        val input = "car A, car B"
 
         assertThatThrownBy { CarNameValidator.validateAll(input.split(",")) }
             .isInstanceOf(IllegalArgumentException::class.java)
